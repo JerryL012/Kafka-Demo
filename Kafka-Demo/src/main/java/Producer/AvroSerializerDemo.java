@@ -21,7 +21,7 @@ public class AvroSerializerDemo {
         Random random = new Random();
         while (true){
             Customer customer = new Customer(random.nextInt(10), "");
-            System.out.println("Generated customer" + customer.toString());
+            System.out.println("Generated customer" + customer);
             ProducerRecord<String, Customer> record = new ProducerRecord<String, Customer>(topic, customer);
             producer.send(record);
         }
